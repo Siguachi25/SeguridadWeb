@@ -15,7 +15,7 @@ using System.Security.Claims;
 
 namespace SeguridadWeb.UI.AppWebAspNetCore.Controllers
 {
-    //[Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme)]
     public class UsuarioController : Controller
     {
         UsuarioBL usuarioBL = new UsuarioBL();

@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SeguridadWeb.UIAppWebAspCore.Models;
 using System.Diagnostics;
@@ -12,6 +14,7 @@ namespace SeguridadWeb.UIAppWebAspCore.Controllers
         {
             _logger = logger;
         }
+        [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme)]
 
         public IActionResult Index()
         {
