@@ -1,11 +1,12 @@
-﻿using System;
+﻿// *******************************************
+using Microsoft.EntityFrameworkCore;
+using SeguridadWeb.EntidadesDeNegocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-// *******************************************
-using Microsoft.EntityFrameworkCore;
-using SeguridadWeb.EntidadesDeNegocio;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SeguridadWeb.AccesoADatos
 {
@@ -16,7 +17,7 @@ namespace SeguridadWeb.AccesoADatos
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-DEV01\SQLEXPRESS;Initial Catalog=Seguridadwebdb;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source = localhost\SQLEXPRESS; Initial Catalog = Seguridadwebdb; Integrated Security = True; Encrypt = False; Trust Server Certificate = True");
         }
     }
 }

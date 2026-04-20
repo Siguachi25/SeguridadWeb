@@ -38,6 +38,7 @@ namespace SeguridadWeb.EntidadesDeNegocio
         public Rol Rol { get; set; }
         [NotMapped]
         public int Top_Aux { get; set; }
+        [NotMapped]
         [Required(ErrorMessage = "Confirmar el password")]
         [StringLength(32, ErrorMessage = "Password debe estar entre 5 a 32 caracteres", MinimumLength = 5)]
         [DataType(DataType.Password)]

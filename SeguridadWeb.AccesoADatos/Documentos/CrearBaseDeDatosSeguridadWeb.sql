@@ -1,5 +1,4 @@
-USE [master]
-GO
+
 CREATE DATABASE [Seguridadwebdb]
 GO
 USE [Seguridadwebdb]
